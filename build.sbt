@@ -13,5 +13,9 @@ scalaVersion := "2.11.6"
 lazy val root = (project in file("."))
 
 libraryDependencies ++= Seq(
-  "org.codehaus.jettison" % "jettison" % "1.1"
+  "io.dropwizard" % "dropwizard-core" % "0.7.1"
+)
+
+resolvers ++= Seq(
+  "Typesafe repository" at "http://repo.typesafe.com/typesafe/releases/"
 )
