@@ -1,11 +1,11 @@
 package com.rural.house.lg.model.defaults;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
-import com.rural.house.lg.model.interfaces.Booking;
+import com.rural.house.lg.model.interfaces.BookingEnquiry;
 
 import java.sql.Timestamp;
 
-public class DefaultBooking implements Booking {
+public class DefaultBookingEnquiry implements BookingEnquiry {
 
     @JsonProperty
     private Timestamp arrivingDate;
@@ -16,11 +16,11 @@ public class DefaultBooking implements Booking {
     @JsonProperty
     private Integer nights;
 
-    public DefaultBooking(){
+    public DefaultBookingEnquiry(){
 
     }
 
-    public DefaultBooking(Timestamp arrivingDate, Integer guests, Integer nigths){
+    public DefaultBookingEnquiry(Timestamp arrivingDate, Integer guests, Integer nigths){
         this.arrivingDate = arrivingDate;
         this.guests = guests;
         this.nights = nigths;

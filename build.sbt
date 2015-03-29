@@ -10,6 +10,8 @@ version := "0.1.0"
 
 scalaVersion := "2.11.6"
 
+crossPaths := false
+
 lazy val root = (project in file("."))
 
 libraryDependencies ++= Seq(
