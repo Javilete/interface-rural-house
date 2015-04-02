@@ -16,7 +16,7 @@ public interface BookingEnquiry {
 
     public void setGuests(Integer guests);
 
-    public Integer getNights();
+    public Timestamp getDepartingDate();
 
-    public void setNights(Integer nights);
+    public void setDepartingDate(Timestamp departingDate);
 }

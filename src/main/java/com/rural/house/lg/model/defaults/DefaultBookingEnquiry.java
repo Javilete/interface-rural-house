@@ -14,16 +14,16 @@ public class DefaultBookingEnquiry implements BookingEnquiry {
     private Integer guests;
 
     @JsonProperty
-    private Integer nights;
+    private Timestamp departingDate;
 
     public DefaultBookingEnquiry(){
 
     }
 
-    public DefaultBookingEnquiry(Timestamp arrivingDate, Integer guests, Integer nigths){
+    public DefaultBookingEnquiry(Timestamp arrivingDate, Integer guests, Timestamp departingDate){
         this.arrivingDate = arrivingDate;
         this.guests = guests;
-        this.nights = nigths;
+        this.departingDate = departingDate;
     }
 
     @Override
@@ -47,12 +47,12 @@ public class DefaultBookingEnquiry implements BookingEnquiry {
     }
 
     @Override
-    public Integer getNights() {
-        return this.nights;
+    public Timestamp getDepartingDate() {
+        return this.departingDate;
     }
 
     @Override
-    public void setNights(Integer nights) {
-        this.nights = nights;
+    public void setDepartingDate(Timestamp departingDate) {
+        this.departingDate = departingDate;
     }
 }
