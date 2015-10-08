@@ -1,56 +1,48 @@
 package com.rural.house.lg.model.defaults;
 
-import com.rural.house.lg.model.RoomType;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.rural.house.lg.model.interfaces.Availability;
 import com.rural.house.lg.model.interfaces.AvailableRoomResponse;
+import com.rural.house.lg.model.interfaces.Room;
 
-import java.sql.Timestamp;
 import java.util.List;
 
 public class DefaultAvailableRoomResponse implements AvailableRoomResponse {
 
-    private RoomType roomType;
+    @JsonProperty
+    private Room room;
 
-    private List<Timestamp> dateList;
-
-    private Integer guests;
+    @JsonProperty
+    private List<Availability> availability;
 
     public DefaultAvailableRoomResponse() {
 
     }
 
-    public DefaultAvailableRoomResponse(RoomType roomType, List<Timestamp> dateList, Integer guests){
-        this.roomType = roomType;
-        this.dateList = dateList;
-        this.guests = guests;
+    public DefaultAvailableRoomResponse(Room room, List<Availability> availability){
+        this.room = room;
+        this.availability = availability;
     }
 
     @Override
-    public RoomType getType() {
-        return this.roomType;
+    public Room getRoom() {
+        return this.room;
     }
 
     @Override
-    public void setType(RoomType roomType) {
-        this.roomType = roomType;
+    public void setRoom(Room room) {
+        this.room = room;
     }
 
     @Override
-    public List<Timestamp> getDateList() {
-        return this.dateList;
+    public List<Availability> getAvailability() {
+        return this.availability;
     }
 
     @Override
-    public void setDateList(List<Timestamp> dateList) {
-        this.dateList = dateList;
+    public void setAvailability(List<Availability> roomAvailabilities) {
+        this.availability = roomAvailabilities;
     }
 
-    @Override
-    public Integer getGuests() {
-        return this.guests;
-    }
 
-    @Override
-    public void setGuests(Integer guests) {
-        this.guests = guests;
-    }
 }

@@ -6,7 +6,7 @@ name := "interface-rural-house"
 
 organization := "com.rural.house.lg"
 
-version := "0.1.0"
+version := "0.1.3"
 
 scalaVersion := "2.11.6"
 

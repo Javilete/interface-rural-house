@@ -10,6 +10,7 @@ import javax.ws.rs.Path;
 import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;
+import java.util.List;
 
 @Path("/api/booking")
 @Documentation("BookingEnquiry API")
@@ -29,9 +30,9 @@ public abstract class BookingResource {
     @Consumes(MediaType.APPLICATION_JSON)
     @Produces(MediaType.APPLICATION_JSON)
     @Path("/submit")
-    public Response submitReservation(BookingConfirmation bookingConfirmation) {
+    public Response submitReservation(List<BookingConfirmation> bookingConfirmation) {
         return submitReservationImpl(bookingConfirmation);
     }
 
-    public abstract Response submitReservationImpl(BookingConfirmation bookingConfirmation);
+    public abstract Response submitReservationImpl(List<BookingConfirmation> bookingConfirmation);
 }
